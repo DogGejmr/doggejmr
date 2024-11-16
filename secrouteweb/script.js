@@ -1,16 +1,14 @@
 let lastScrollTop = 0;
 const header = document.querySelector('header');
 const nav = document.querySelector('nav');
-const headerHeight = header.offsetHeight;
 
 window.addEventListener('scroll', () => {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     
-    if (scrollTop > lastScrollTop && scrollTop > headerHeight) {
-        // Scrolling down
+    // Hide header with any downward scroll
+    if (scrollTop > lastScrollTop && scrollTop > 10) {
         header.style.transform = 'translateY(-100%)';
     } else {
-        // Scrolling up
         header.style.transform = 'translateY(0)';
     }
     
