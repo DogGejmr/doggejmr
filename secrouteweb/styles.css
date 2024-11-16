@@ -50,7 +50,7 @@ nav {
     align-items: center;
 }
 
-nav h1 {
+nav h1, .footer-brand h3 {
     font-family: 'Space Grotesk', sans-serif;
     font-size: 1.8rem;
     font-weight: 700;
@@ -62,6 +62,12 @@ nav h1 {
 
 nav h1 i {
     color: var(--accent);
+}
+
+.nav-logo {
+    height: 24px;
+    width: 24px;
+    vertical-align: middle;
 }
 
 nav ul {
