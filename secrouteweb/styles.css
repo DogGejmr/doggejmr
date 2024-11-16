@@ -39,6 +39,7 @@ header {
     width: 100%;
     z-index: 1000;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease-in-out;
 }
 
 nav {
@@ -401,34 +402,109 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+/* Mobile Navigation */
+@media screen and (max-width: 768px) {
     nav {
         flex-direction: column;
-        text-align: center;
-        gap: 1.5rem;
+        gap: 1rem;
     }
 
     nav ul {
         flex-direction: column;
         width: 100%;
+        gap: 1rem;
+    }
+
+    nav li {
+        width: 100%;
+        text-align: center;
     }
 
     nav a {
         display: block;
-        width: 100%;
+        padding: 0.8rem;
     }
 
     .hero-content h2 {
         font-size: 2.5rem;
     }
 
-    .footer-content {
+    .hero-content p {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+    }
+
+    .features-grid {
         grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+
+    .how-content {
+        padding: 0 1rem;
+    }
+
+    .features-list {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .audience-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
         gap: 2rem;
     }
 
     .footer-links {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+        gap: 2rem;
     }
+
+    .link-group {
+        text-align: center;
+    }
+
+    section {
+        padding: 4rem 1rem;
+    }
+
+    .hero-section {
+        padding-top: 8rem;
+    }
+}
+
+/* Tablet Optimization */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 2rem;
+    }
+
+    .audience-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 2rem;
+    }
+
+    .hero-content h2 {
+        font-size: 3rem;
+    }
+
+    section {
+        padding: 5rem 2rem;
+    }
+}
+
+/* General Responsive Improvements */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.feature-card, .audience-card {
+    margin: 0 auto;
+    max-width: 400px;
 }
